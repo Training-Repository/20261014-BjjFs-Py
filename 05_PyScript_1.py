@@ -1,12 +1,21 @@
-lst = []
-lst = list()
+# Fibonacci series
+def FibGen(n):
+    a, b = 0, 1
+    for i in range(n):
+        yield a
+        a, b = b, a + b
+    print("||DONE||")
 
-# for 
-# range
-# lst.append(num)
+x = FibGen(5)
+# val = next(x)
+# type(x), type(FibGen), next(x), next(x), next(x), next(x), next(x), next(x)
 
-for num in range(0,21, 2):
-    
-    lst.append(num)
+while True:
+    try:
+        val = next(x)
+        print(val, end=", ")
+    except StopIteration:
+        print("\nDone with Fibonacci series")
+        break
 
-print(lst)
+print("="*80)
