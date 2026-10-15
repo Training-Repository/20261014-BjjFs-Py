@@ -1,0 +1,3 @@
+ls
+ll -a
+time
